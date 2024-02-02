@@ -15,7 +15,7 @@ html {
 body {
    background: #f8f9f5;
    font-family: 'Open Sans', sans-serif;
-   color: #a2651d;
+   color: #263850;
 }
 
 /*-- Extra Bootstrap Column Padding --*/
@@ -284,7 +284,7 @@ img.logo {
    transition: all 0.5s ease 0s;
 }
 .footer .svg-inline--fa:hover {
-   color: #a2651d;
+   color: #263850;
 }
 
 /*-- Footer Socket --*/

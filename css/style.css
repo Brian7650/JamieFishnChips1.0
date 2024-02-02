@@ -1,0 +1,420 @@
+/*============= RESET STYLE =============
+FONTS:
+Body/Nav: font-family: 'Open Sans', sans-serif;
+Headings: font-family: 'Dancing Script', cursive;
+*/
+
+/*-- iPhone X Remove Gutters
+Ignore W3C Validation error for this style. --*/
+html {
+   padding: env(safe-area-inset);
+   scroll-behavior: auto!important; /*-- Disable Bootstrap 5 Scroll Behavior to control speed in plugins.js --*/
+}
+
+/*-- Body Font --*/
+body {
+   background: #f8f9f5;
+   font-family: 'Open Sans', sans-serif;
+   color: #a2651d;
+}
+
+/*-- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+   padding: 1rem;
+}
+
+/*-- Remove Blue Browser Outline Around Buttons in Chrome --*/
+a:focus,
+button:focus {
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/*-- Pointer Cursor On Links & Buttons --*/
+a, .btn, button {
+   cursor: pointer!important;
+}
+
+/*-- Main Wrapping Container --*/
+.wrapper {
+	max-width: 1120px;
+   width: 97%;
+   margin: 0 auto;
+   padding: 0;
+	background: #f8f9f5;
+	border: .05rem solid #555;
+   box-shadow: 0 0 .5rem 0 #555;
+   overflow: hidden;
+}
+
+/*-- Headings & Text --*/
+h1.title {
+   font-family: 'Dancing Script', cursive;
+   font-weight: 700;
+   font-size: 3rem;
+   color: #263850;
+   text-align: center;
+}
+h3.title {
+   font-family: 'Dancing Script', cursive;
+   font-weight: 700;
+   font-size: 1.8rem;;
+   color: #263850;
+   text-align: center;
+}
+.title a {
+   color: #263850;
+}
+p.lead {
+   font-size: 1.1rem;
+}
+
+/*-- Buttons --*/
+.btn {
+   border-width: medium;
+   border-radius: 0;
+   margin: .5rem;
+}
+.btn-green {
+   border-width: medium;
+   border-radius: 0;
+   margin: .5rem;
+}
+.btn-green {
+   border-color: #263850;
+   background-color: #263850;
+   color: white;
+}
+.btn-green:hover,
+.btn-green:focus {
+   border-color: #263850;
+   background-color: white;
+   color: #263850;
+}
+
+/*-- Background Colors --*/
+.bg-green {
+   background-color: #263850;
+}
+.bg-clear {
+   background-color:#f8f9f5;
+}
+
+/*-- Set Max Width for all IMGs --*/
+img {
+   max-width: 100%;
+}
+
+/*============= HEADER =============*/
+
+.top-bar {
+   background: #263850;
+   height: 2.55rem;
+   padding: .5rem 0;
+}
+.top-bar [class*="col-"] {
+   padding: 0!important;
+   margin: 0!important;
+}
+.top-bar p, .top-bar a {
+   font-size: 1.05rem;
+   color: white!important;
+   text-decoration: none!important;
+}
+.social-center {
+   max-width: 9.7rem;
+}
+ul.social {
+   display: flex;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+ul.social li {
+   display: inline;
+   padding: 0 .5rem;
+}
+.top-bar .svg-inline--fa {
+   color: white;
+   font-size: 1.3rem;
+   transition: all 0.5s ease 0s;
+}
+.top-bar .svg-inline--fa:hover {
+   color: #263850;
+}
+
+/*============= NAVIGATION =============*/
+
+.navbar-brand img {
+   height: 2rem;
+}
+.navbar {
+   padding: 0;
+   font-size: 1rem;
+   letter-spacing: .1rem;
+   font-weight: 700;
+   background-color: #263850;
+}
+.navbar-nav li {
+   background-color: #f8f9f5;
+   border: .15rem solid #263850;
+   border-right: 0;
+   transition: all .5s ease;
+}
+.navbar-nav li:last-of-type {
+   border-right: .15rem solid #263850;
+}
+.navbar-nav li.active,
+.navbar-nav li:hover {
+   background-color: #263850;
+   transition: all .5s ease;
+}
+.navbar-nav .nav-link {
+   font-size: 1.05rem;;
+   padding-top: .5rem;
+   color: #263850;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+   color: white;
+}
+.svg-inline--fa.fa-bars {
+   color: white;
+   font-size: 1.6rem;
+}
+.custom-toggler-icon .fab,
+.custom-toggler-icon .fas {
+  color: white;
+  font-size: 1.8rem;
+}
+.navbar-toggler {
+   border: none!important;
+}
+
+/*============= CAROUSEL =============*/
+
+/*-- Change Carousel Transition Speed --*/
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+  display: block;
+  transition: -webkit-transform 1.2s ease;
+  transition: transform 1.2s ease;
+  transition: transform 1.2s ease,-webkit-transform 1.2s ease;
+}
+
+/*-- Carousel Previous & Nest Buttons --*/
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+  cursor: pointer!important;
+}
+.carousel-control-next {
+   padding-right: 3.2rem!important;
+}
+.carousel-control-prev .svg-inline--fa,
+.carousel-control-next .svg-inline--fa {
+  position: absolute;
+  background: #263850;
+  border-radius: 0;
+  padding: .6rem .9rem!important;
+  font-size: 2rem!important;
+  color: #f8f9f5;
+  opacity: .7;
+  transition: all .5s ease;
+}
+.carousel-control-prev .svg-inline--fa:hover,
+.carousel-control-next .svg-inline--fa:hover {
+  background: #f8f9f5;
+  color: #263850;
+  opacity: 1;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+/*-- Make Carousel Prev/Next Visible on hover --*/
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility 0s linear 1000s, opacity 1000ms;
+}
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+   visibility: visible !important;
+   opacity: 1;
+   transition: visibility 0s linear 0s, opacity 1000ms;
+}
+
+/*-- Carousel Caption --*/
+.carousel-caption {
+   left: 12%;
+   right: 12%;
+   position: absolute;
+   transform: translateY(-50%);
+   top: 45%;
+}
+.carousel-caption.text-left,
+.carousel-caption.text-right {
+   top: 41%;
+}
+
+/*============= CONTACT SECTION =============*/
+
+.footer {
+   background-color: #263850;
+}
+img.logo {
+   max-height: 4rem;
+}
+.footer a {
+   color: white;
+   text-decoration: none;
+}
+.footer .social-center {
+   max-width: 12rem;
+   padding-bottom: 1rem;
+}
+.footer ul.social li {
+   display: inline;
+   padding: 1rem .5rem;
+}
+.footer .svg-inline--fa {
+   color: white;
+   font-size: 1.6rem;
+   transition: all 0.5s ease 0s;
+}
+.footer .svg-inline--fa:hover {
+   color: #a2651d;
+}
+
+/*-- Footer Socket --*/
+hr.socket {
+   border-top: .3rem solid #fff;
+}
+
+/*============= FACILITIES PAGE =============*/
+
+.list-group li {
+   background-color: #263850;
+	text-align: center;
+	padding: .4rem;
+   color: #263850;
+   font-size: 1.25rem;
+   font-weight: 300;
+   letter-spacing: .1rem;
+}
+
+/*============= PRICING & HOURS Table =============*/
+
+table, tr {
+   border: .15rem solid #a2651d;
+}
+.thread-green {
+   background-color: #a2651d;
+   border-bottom: .15rem solid #a2651d;
+}
+thead th, thead td {
+   color: white;
+   border-top: 0!important;
+   border-bottom: 0!important;
+   border-right: .1rem solid #a2651d;
+}
+th, td {
+   font-weight: 700;
+   color: #a2651d;
+   border-right: .1rem solid #000;
+}
+
+/*============= CONTACT FORM =============*/
+.form-group {
+   margin-bottom: 1.3rem;
+}
+.form-control {
+   background: #f8f9f5;
+   border-radius: 0;
+   border: .15rem solid #a2651d;
+   color: #a2651d!important;
+   font-size: 1.1rem;
+}
+.form-control:focus {
+   background: #F1EEDC;
+   border: .15rem solid #a2651d;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+   color: #a2651d;
+}
+.controls input:focus,
+.controls textarea:focus { /*-- Remove Element Outlines in Contact Form --*/
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+.btn-close { /*-- Resize "X" space in success/failure form message --*/
+   width: .5em!important;
+   height: .7em!important;
+   padding: .5em .9em!important;
+}
+
+/*============= MEDIA QUERIES =============*/
+
+/* Medium (md) devices (tablets, 768px and under) */
+@media (max-width: 767.98px) {
+   .carousel-caption {
+      top:40%;
+   }
+   .carousel-caption h2 {
+      font-size: 2rem;
+   }
+   h1.title {
+      font-size: 2.2rem;
+   }
+   p.lead {
+      font-size: 1rem;
+   }
+   h3.title {
+      font-size: 1.6rem;
+   }
+}
+
+/* Small (sm) devices (landscape phones, 576px and under) */
+@media (max-width: 575.98px) {
+   .navbar-toggler {
+      width: 100%;
+   }
+   .custom-toggler-icon {
+      float: right;
+      padding-right: 2rem;
+   }
+   .navbar-nav li {
+      border-top: 0;
+   }
+   .navbar-nav li:first-of-type {
+      border-top: .1rem solid #a2651d;
+   }
+   .carousel-caption {
+      top:32%!important;
+   }
+   th, td {
+      font-size: .9rem;
+   }
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
